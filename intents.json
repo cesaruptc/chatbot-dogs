@@ -1,14 +1,62 @@
-{"intents":[
-    {
-        "tag": "saludo",
-        "patterns": ["hola", "qué tal", "cómo estás", "saludos"],
-        "responses": ["Hola!", "Buenos días!", "¿Cómo estás?"]
-    },
-    {
-        "tag": "nombre",
-        "patterns": ["cómo es tu nombre", "cómo te llamas"],
-        "responses": ["Me llamo Juan Pablo", "Mi nombre es Juan Pablo"]
-    }
-]
-
+{
+    "intents": [
+        {
+            "tag": "saludo",
+            "patterns": ["hola", "qué tal", "cómo estás", "buenos días", "buenas tardes", "buenas noches"],
+            "responses": ["¡Hola! ¿Cómo puedo ayudarte hoy?", "¡Hola! Bienvenido, ¿en qué puedo asistirte?", "¡Buenos días! ¿En qué puedo ayudarte?"]
+        },
+        {
+            "tag": "nombre_perro",
+            "patterns": ["cómo se llama tu perro", "nombre de tu perro"],
+            "responses": ["Mi fiel compañero se llama Max", "Su nombre es Rocky, ¿quieres saber más sobre él?"]
+        },
+        {
+            "tag": "razas",
+            "patterns": ["cuéntame sobre las razas de perros", "razas caninas", "cuál es tu raza", "explícame sobre los tipos de perros"],
+            "responses": ["Hay una increíble variedad de razas de perros, desde el majestuoso Pastor Alemán hasta el encantador Bichón Frisé."]
+        },
+        {
+            "tag": "informacion_raza",
+            "patterns": ["háblame sobre [raza]", "dime más sobre [raza]", "características de [raza]", "cuéntame sobre [raza]"],
+            "responses": [
+                "La raza [raza] es conocida por su [característica1], [característica2], y [característica3].",
+                "Algunas características destacadas de [raza] incluyen [característica1] y [característica2]."
+            ]
+        },
+        {
+            "tag": "comportamiento",
+            "patterns": ["cómo son los perros [raza] en términos de comportamiento", "comportamiento de [raza]", "personalidad de [raza]"],
+            "responses": ["Los perros [raza] son generalmente [comportamiento1] y [comportamiento2]. Son conocidos por su [cualidad] y [otra_cualidad]."]
+        },
+        {
+            "tag": "cuidados",
+            "patterns": ["cómo cuidar a un perro", "cuidados de los perros", "consejos para cuidar perros"],
+            "responses": ["Los perros necesitan amor, ejercicio regular, una dieta equilibrada y visitas periódicas al veterinario para mantenerse saludables."]
+        },
+        {
+            "tag": "entrenamiento",
+            "patterns": ["cómo entrenar a un perro", "consejos de entrenamiento canino", "educación para perros"],
+            "responses": ["El entrenamiento consistente y positivo es clave para enseñar buenos modales a tu perro. Recuerda ser paciente y utilizar refuerzos positivos."]
+        },
+        {
+            "tag": "alimentacion",
+            "patterns": ["mejor comida para perros", "dieta canina equilibrada", "qué debe comer mi perro"],
+            "responses": ["Es importante proporcionar a tu perro una dieta equilibrada que incluya proteínas, grasas, carbohidratos, vitaminas y minerales. Consulta a tu veterinario para obtener recomendaciones específicas."]
+        },
+        {
+            "tag": "salud",
+            "patterns": ["cómo mantener a mi perro saludable", "signos de enfermedad en perros", "cuidados veterinarios"],
+            "responses": ["Para mantener a tu perro saludable, programa chequeos regulares con el veterinario, mantén al día sus vacunas y observa cualquier cambio en su comportamiento o apariencia."]
+        },
+        {
+            "tag": "jugar",
+            "patterns": ["juegos para perros", "cómo entretener a mi perro", "actividades recreativas caninas"],
+            "responses": ["Jugar es esencial para la salud mental y física de tu perro. Prueba con juguetes interactivos, paseos y juegos al aire libre."]
+        },
+        {
+            "tag": "despedida",
+            "patterns": ["adiós", "hasta luego", "nos vemos", "chao"],
+            "responses": ["¡Hasta luego! Si tienes más preguntas, estaré aquí para ayudarte.", "¡Adiós! Siempre estoy aquí si necesitas más información."]
+        }
+    ]
 }
