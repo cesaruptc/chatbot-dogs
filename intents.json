@@ -40,7 +40,7 @@
         },
         {
             "tag": "alimentacion",
-            "patterns": ["mejor comida para perros", "dieta canina equilibrada", "qué debe comer mi perro","que puede comer un perro"],
+            "patterns": ["mejor comida para perros", "dieta canina equilibrada", "qué debe comer mi perro","que puede comer un perro","Que le doy de comer a mi perro"],
             "responses": ["Es importante proporcionar a tu perro una dieta equilibrada que incluya proteínas, grasas, carbohidratos, vitaminas y minerales. Consulta a tu veterinario para obtener recomendaciones específicas."]
         },
         {
