@@ -23,7 +23,7 @@ intents = json.loads(open('intents.json').read())
 words = []
 classes = []
 documents = []
-ignore_letters = ['?', '!', '¿', '.', ',']
+ignore_letters = ['?', '!', '¿', '.', ','   ]
 
 for intent in intents['intents']:
     for pattern in intent['patterns']:
@@ -53,6 +53,8 @@ for document in documents:
     output_row[classes.index(document[1])] = 1
     training.append([bag, output_row])
 
+np.random.seed(42)
+
 random.shuffle(training)
 
 # Convierte las listas en arrays NumPy
@@ -61,18 +63,18 @@ train_y = np.array([entry[1] for entry in training])
 
 # Definición del modelo de la red neuronal
 model = Sequential()
-model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
+model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu')) #capa densa
+model.add(Dropout(0.5)) #drop out
+model.add(Dense(64, activation='relu')) #Densa
 model.add(Dropout(0.5))
-model.add(Dense(64, activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(len(train_y[0]), activation='softmax'))
+model.add(Dense(len(train_y[0]), activation='softmax')) #Densa de salida
 
 # Compilación del modelo
 sgd = SGD(learning_rate=0.001, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
 # Entrenamiento del modelo
-model.fit(train_x, train_y, epochs=100, batch_size=5, verbose=1)
+model.fit(train_x, train_y, epochs=100, batch_size=2, verbose=1)
 
 # Guarda el modelo entrenado
 model.save("chatbot_model.h5")
