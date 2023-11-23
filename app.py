@@ -34,7 +34,7 @@ def chat():
 stemmer = SnowballStemmer("spanish")
 
 # Importar los archivos generados en el código anterior
-intents = json.loads(open("intents.json").read())
+intents = json.loads(open("intents.json", encoding="utf-8").read())
 words = pickle.load(open("words.pkl", "rb"))
 classes = pickle.load(open("classes.pkl", "rb"))
 model = load_model("chatbot_model.h5")
@@ -74,9 +74,10 @@ def get_response(tag, intents_json):
 
 
 def get_Chat_response(text):
-        ints = predict_class(text)
-        res = get_response(ints, intents)
-        return res
+    print("Intents: ", intents)
+    ints = predict_class(text)
+    res = get_response(ints, intents)
+    return res
 
 if __name__ == '__main__':
     app.run()
