@@ -2,23 +2,23 @@ import random
 import json
 import pickle
 import numpy as np
-
-from nltk.stem import WordNetLemmatizer
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem.snowball import SnowballStemmer
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
 from keras.optimizers import SGD
+from unidecode import unidecode
 
-# Descarga los recursos necesarios para NLTK
-import nltk
-
+# Descargar recursos necesarios para NLTK (si no los has descargado)
+nltk.download("stopwords")
 nltk.download("punkt")
-nltk.download("wordnet")
-nltk.download("omw-1.4")
 
-# Inicializa el lematizador
-lemmatizer = WordNetLemmatizer()
+# Inicializar el lematizador
+stemmer = SnowballStemmer("spanish")
 
-# Carga los datos de intents.json
+# Cargar los datos de intents.json
 intents = json.loads(open("intents.json").read())
 
 # Procesamiento de datos
@@ -27,17 +27,22 @@ classes = []
 documents = []
 ignore_letters = ["?", "!", "¿", ".", ",", "á", "é", "í", "ó", "ú", "ü", "ñ"]
 
+# Obtener palabras vacías (stopwords) en español
+stop_words = set(stopwords.words("spanish"))
+
 for intent in intents["intents"]:
     for pattern in intent["patterns"]:
-        word_list = nltk.word_tokenize(pattern)
+        # Tokenización y lematización en español
+        word_list = [
+            stemmer.stem(unidecode(word.lower()))
+            for word in word_tokenize(pattern)
+            if word not in ignore_letters and word not in stop_words
+        ]
         words.extend(word_list)
         documents.append((word_list, intent["tag"]))
         if intent["tag"] not in classes:
             classes.append(intent["tag"])
 
-words = [
-    lemmatizer.lemmatize(word.lower()) for word in words if word not in ignore_letters
-]
 words = sorted(set(words))
 
 pickle.dump(words, open("words.pkl", "wb"))
@@ -49,7 +54,7 @@ output_empty = [0] * len(classes)
 
 for document in documents:
     bag = [0] * len(words)
-    word_patterns = [lemmatizer.lemmatize(word.lower()) for word in document[0]]
+    word_patterns = [stemmer.stem(unidecode(word.lower())) for word in document[0]]
     for word in words:
         bag[words.index(word)] = 1 if word in word_patterns else 0
 
@@ -64,6 +69,7 @@ random.shuffle(training)
 # Convierte las listas en arrays NumPy
 train_x = np.array([entry[0] for entry in training])
 train_y = np.array([entry[1] for entry in training])
+
 
 # Definición del modelo de la red neuronal
 model = Sequential()

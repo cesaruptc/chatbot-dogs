@@ -3,10 +3,13 @@ import json
 import pickle
 import numpy as np
 import nltk
-from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import word_tokenize
+from nltk.stem.snowball import SnowballStemmer
 from keras.models import load_model
+from unidecode import unidecode
 
-lemmatizer = WordNetLemmatizer()
+# Inicializar el lematizador en español
+stemmer = SnowballStemmer("spanish")
 
 # Importar los archivos generados en el código anterior
 intents = json.loads(open("intents.json").read())
@@ -15,10 +18,9 @@ classes = pickle.load(open("classes.pkl", "rb"))
 model = load_model("chatbot_model.h5")
 
 
-# Pasar las palabras de oración a su forma raíz
+# Pasar las palabras de la oración a su forma raíz
 def clean_up_sentence(sentence):
-    sentence_words = nltk.word_tokenize(sentence)
-    sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
+    sentence_words = [stemmer.stem(unidecode(word.lower())) for word in word_tokenize(sentence)]
     return sentence_words
 
 
