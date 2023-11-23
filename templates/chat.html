@@ -70,6 +70,11 @@
                 $("#text").val("");
                 $("#messageFormeight").append(userHtml);
 
+                var messageFormeight = $("#messageFormeight");
+                messageFormeight.animate({
+                    scrollTop: messageFormeight.prop("scrollHeight") + 100
+                }, 500);
+
                 $.ajax({
                     data: {
                         msg: rawText,

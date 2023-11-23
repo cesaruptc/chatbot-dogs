@@ -19,7 +19,7 @@
     {
       "tag": "estado",
       "patterns": [
-        "(.*) como estas (.*)",
+        "como estas",
         "(.*) como te sientes (.*)",
         "(.*) como te encuentras (.*)",
         "(.*) que tal (.*)"
