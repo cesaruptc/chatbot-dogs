@@ -1,72 +1,66 @@
 {
-    "intents": [
-        {
-            "tag": "saludo",
-            "patterns": ["hola", "que tal", "buenos dias", "buenas tardes", "buenas noches","como estas"],
-            "responses": ["¡Hola!", "¡Hola!, ¿en qué puedo asistirte?", "¡Buenos días! ¿En qué puedo ayudarte?"]
-        },
-        {
-            "tag": "nombre_perro",
-            "patterns": ["como se llama tu perro", "nombre de tu perro"],
-            "responses": ["Mi fiel compañero se llama Max", "Su nombre es Rocky, ¿quieres saber más sobre él?"]
-        },
-        {
-            "tag": "razas",
-            "patterns": ["cuentame sobre las razas de perros", "razas caninas", "cual es tu raza", "explícame sobre los tipos de perros"],
-            "responses": ["Hay una increíble variedad de razas de perros, desde el majestuoso Pastor Alemán hasta el encantador Bichón Frisé."]
-        },
-        {
-            "tag": "informacion_raza",
-            "patterns": ["hablame sobre [raza]", "dime más sobre [raza]", "características de [raza]", "cuentame sobre [raza]"],
-            "responses": [
-                "La raza [raza] es conocida por su [caracteristica1], [caracteristica2], y [caracteristica3].",
-                "Algunas características destacadas de [raza] incluyen [caracteristica1] y [caracteristica2]."
-            ]
-        },
-        {
-            "tag": "comportamiento",
-            "patterns": ["cómo son los perros [raza] en términos de comportamiento", "comportamiento de [raza]", "personalidad de [raza]","como se comporta un [raza]"],
-            "responses": ["Los perros [raza] son generalmente [comportamiento1] y [comportamiento2]. Son conocidos por su [cualidad] y [otra_cualidad]."]
-        },
-        {
-            "tag": "cuidados",
-            "patterns": ["cómo cuidar a un perro", "cuidados de los perros", "consejos para cuidar perros"],
-            "responses": ["Los perros necesitan amor, ejercicio regular, una dieta equilibrada y visitas periódicas al veterinario para mantenerse saludables."]
-        },
-        {
-            "tag": "entrenamiento",
-            "patterns": ["cómo entrenar a un perro", "consejos de entrenamiento canino", "educacion para perros","como puedo educar a mi perro"],
-            "responses": ["El entrenamiento consistente y positivo es clave para enseñar buenos modales a tu perro. Recuerda ser paciente y utilizar refuerzos positivos."]
-        },
-        {
-            "tag": "alimentacion",
-            "patterns": ["mejor comida para perros", "dieta canina equilibrada", "qué debe comer mi perro","que puede comer un perro","Que le doy de comer a mi perro"],
-            "responses": ["Es importante proporcionar a tu perro una dieta equilibrada que incluya proteinas, grasas, carbohidratos, vitaminas y minerales. Consulta a tu veterinario para obtener recomendaciones específicas."]
-        },
-        {
-            "tag": "salud",
-            "patterns": ["cómo mantener a mi perro saludable", "signos de enfermedad en perros", "cuidados veterinarios","mi perro esta enfermo"],
-            "responses": ["Para mantener a tu perro saludable, programa chequeos regulares con el veterinario, mantén al día sus vacunas y observa cualquier cambio en su comportamiento o apariencia."]
-        },
-        {
-            "tag": "jugar",
-            "patterns": ["juegos para perros", "cómo entretener a mi perro", "actividades recreativas caninas","que actividades puedo hacer con mi perro","que puedo jugar con mi perro?"],
-            "responses": ["Jugar es esencial para la salud mental y física de tu perro. Prueba con juguetes interactivos, paseos y juegos al aire libre."]
-        },
-        {
-            "tag": "estres",
-            "patterns": ["como no estresar a mi perro?", "como se si mi perro está estresado?", "que le genera estres a mi perro?","como le quito el estres a mi perro?","mi perro tiene estres?"],
-            "responses": ["Algunos factores que pueden generar estres en los perros incluyen cambios en el entorno, falta de ejercicio, ruidos fuertes, y separacion. Para evitar el estres, proporciona un ambiente estable, brinda suficiente ejercicio y atencion, y considera la socializacion gradual."]
-        },
-        {
-            "tag": "vacunas",
-            "patterns": ["cuando vacuno a mi perro?", "debo vacunar a mi perro?", "vacunas para perro","vacunas obligatorias","porque debo aplicarle vacunas a mi perro"],
-            "responses": ["Debes vacunar a tu perro para prevenir enfermedades graves. Las vacunas clave incluyen rabia, moquillo, parvovirosis, hepatitis, tos de las perreras y leptospirosis, adaptadas a las necesidades individuales de tu mascota. Consulta con tu veterinario para un plan de vacunacion adecuado."]
-        },
-        {
-            "tag": "despedida",
-            "patterns": ["adios", "hasta luego", "nos vemos", "chao"],
-            "responses": ["¡Hasta luego! Si tienes más preguntas, estaré aquí para ayudarte.", "¡Adios! Siempre estoy aquí si necesitas más información."]
-        }
-    ]
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": [
+        "(.*) hola (.*)",
+        "(.*) que tal (.*)",
+        "(.*) buenos dias (.*)",
+        "(.*) buenas tardes (.*)",
+        "(.*) buenas noches (.*)",
+        "(.*) como estas (.*)"
+      ],
+      "responses": [
+        "Hola, en que puedo asistirte",
+        "Que tal, En que puedo ayudarte",
+        "Como estas, En que puedo ayudarte",
+        "Espero que te encuentres bien, En que puedo ayudarte"
+      ]
+    },
+    {
+      "tag": "nombre",
+      "patterns": [
+        "(.*) se llama (.*)",
+        "(.*) nombre (.*)",
+        "(.*) lo llame (.*)"
+      ],
+      "responses": [
+        "Que lindo nombre tiene tu perro, dime en que te puedo ayudar",
+        "Tiene nombre de buen chico, dime en que puedo ayudarte",
+        "Gran nombre para un gran amigo, espero poder colaborarte"
+      ]
+    },
+    {
+      "tag": "razas",
+      "patterns": ["(.*) razas (.*)"],
+      "responses": [
+        "Las razas de perros son tan diversas como sus personalidades, desde las mas activas hasta las mas relajadas.",
+        "Cada raza de perro tiene sus propias caracteristicas unicas, desde el tamano y el pelaje hasta la personalidad y la inteligencia.",
+        "La diversidad de razas de perros permite encontrar el compañero perfecto para cualquier estilo de vida y preferencia.",
+        "Explorar las razas de perros es como sumergirse en un libro lleno de historias, cada raza tiene su propio capitulo unico."
+      ]
+    },
+    {
+      "tag": "comportamiento",
+      "patterns": [
+        "(.*) comportamiento  (.*)",
+        "(.*) comportarse (.*)",
+        "(.*) comportar (.*)"
+      ],
+      "responses": [
+        "La lealtad y el amor incondicional son rasgos distintivos del comportamiento de los perros hacia sus duenos.",
+        "La socializacion temprana es clave para desarrollar un comportamiento equilibrado y amigable en los perros.",
+        "La empatia y la capacidad de entender las emociones humanas hacen que los perros sean compañeros sensibles y comprensivos."
+      ]
+    },
+    {
+      "tag": "cuidados",
+      "patterns": ["(.*) cuidar (.*)", "(.*) cuidados (.*)"],
+      "responses": [
+        "El cuidado responsable de un perro implica amor, compromiso y atencion diaria.",
+        "La atencion a la salud mental de tu perro es tan importante como la fisica; observa sus senales de bienestar emocional.",
+        "Las visitas regulares al veterinario son clave para la deteccion temprana de problemas de salud y para mantener las vacunas al dia."
+      ]
+    }
+  ]
 }
