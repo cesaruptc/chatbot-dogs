@@ -110,6 +110,24 @@
       "responses": [
         "Jugar es esencial para la salud mental y fisica de tu perro. Prueba con juguetes interactivos, paseos y juegos al aire libre."
       ]
+    },
+    {
+      "tag": "baño",
+      "patterns": ["(.*) baño (.*)", "(.*) bañar (.*)", "(.*) bañarlo (.*)"],
+      "responses": [
+        "Si tu perro no parece disfrutar del baño, intenta hacerlo más divertido. Usa juguetes flotantes en la bañera o coloca una alfombra antideslizante para que se sienta más seguro.",
+        "Usa agua tibia durante el baño para que tu perro se sienta cómodo. Asegúrate de que el área de baño esté libre de corrientes de aire y ten a mano todas las herramientas necesarias.",
+        "El baño es una parte importante del cuidado de tu perro. Asegúrate de usar productos específicos para perros y de enjuagar completamente para evitar irritaciones en la piel."
+      ]
+    },
+    {
+      "tag": "paseo",
+      "patterns": ["(.*) paseo (.*)", "(.*) pasear (.*)"],
+      "responses": [
+        "Los paseos son vitales para la salud y felicidad de tu perro. Proporciónele tiempo al aire libre para explorar y ejercitarse.",
+        "Los paseos regulares también son una excelente manera de socializar a tu perro. Exponerlo a diferentes entornos, personas y otros perros puede ayudar a desarrollar su comportamiento social.",
+        "Los paseos son momentos especiales para fortalecer el lazo afectivo con tu perro. Dedica tiempo a interactuar con él y disfrutar de la compañía mutua."
+      ]
     }
   ]
 }
