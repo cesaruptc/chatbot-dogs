@@ -10,7 +10,7 @@ body, html {
 }
 
 .card {
-    height: 800px;
+    height: 90vh;
     border-radius: 15px !important;
     background-color: rgba(30, 30, 30, 0.8) !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);

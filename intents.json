@@ -10,10 +10,10 @@
         "(.*) buenas noches (.*)"
       ],
       "responses": [
-        "Hola, en que puedo asistirte",
+        "Hola, ¿En que puedo asistirte?",
         "¿Qué tal?, ¿En que puedo ayudarte?",
-        "Como estas, En que puedo ayudarte",
-        "Espero que te encuentres bien, En que puedo ayudarte"
+        "¿Cómo estás?, ¿En que puedo ayudarte?",
+        "Espero que te encuentres bien, ¿En que puedo ayudarte?"
       ]
     },
     {
@@ -25,9 +25,9 @@
         "(.*) que tal (.*)"
       ],
       "responses": [
-        "Yo muy bien, espero que tu tambien",
+        "Yo muy bien, espero que tu también",
         "Me encuentro maravillosamente, espero poder ayudarte",
-        "Con todo el animo de ayudarte con lo que necesites sobre perros",
+        "Con todo el ánimo de ayudarte con lo que necesites sobre perros",
         "Con ganas de ayudar, espero que tu te encuentres muy bien"
       ]
     },
@@ -49,8 +49,8 @@
       "patterns": ["(.*) razas (.*)", "(.*) razas caninas (.*)"],
       "responses": [
         "Las razas de perros son tan diversas como sus personalidades, desde las mas activas hasta las mas relajadas.",
-        "Cada raza de perro tiene sus propias caracteristicas unicas, desde el tamano y el pelaje hasta la personalidad y la inteligencia.",
-        "La diversidad de razas de perros permite encontrar el companero perfecto para cualquier estilo de vida y preferencia.",
+        "Cada raza de perro tiene sus propias características únicas, desde el tamaño y el pelaje hasta la personalidad y la inteligencia.",
+        "La diversidad de razas de perros permite encontrar el compañero perfecto para cualquier estilo de vida y preferencia.",
         "Explorar las razas de perros es como sumergirse en un libro lleno de historias, cada raza tiene su propio capitulo unico."
       ]
     },
@@ -62,28 +62,28 @@
         "(.*) comportar (.*)"
       ],
       "responses": [
-        "La lealtad y el amor incondicional son rasgos distintivos del comportamiento de los perros hacia sus duenos.",
-        "La socializacion temprana es clave para desarrollar un comportamiento equilibrado y amigable en los perros.",
-        "La empatia y la capacidad de entender las emociones humanas hacen que los perros sean companeros sensibles y comprensivos."
+        "La lealtad y el amor incondicional son rasgos distintivos del comportamiento de los perros hacia sus dueños.",
+        "La socialización temprana es clave para desarrollar un comportamiento equilibrado y amigable en los perros.",
+        "La empatía y la capacidad de entender las emociones humanas hacen que los perros sean compañeros sensibles y comprensivos."
       ]
     },
     {
       "tag": "cuidados",
       "patterns": ["(.*) cuidar (.*)", "(.*) cuidados (.*)"],
       "responses": [
-        "El cuidado responsable de un perro implica amor, compromiso y atencion diaria.",
-        "La atencion a la salud mental de tu perro es tan importante como la fisica; observa sus senales de bienestar emocional.",
-        "Las visitas regulares al veterinario son clave para la deteccion temprana de problemas de salud y para mantener las vacunas al dia."
+        "El cuidado responsable de un perro implica amor, compromiso y atención diaria.",
+        "La atención a la salud mental de tu perro es tan importante como la física; observa sus señales de bienestar emocional.",
+        "Las visitas regulares al veterinario son clave para la detección temprana de problemas de salud y para mantener las vacunas al dia."
       ]
     },
     {
       "tag": "vacunas",
       "patterns": ["(.*) vacunar (.*)", "(.*) vacunas (.*)"],
       "responses": [
-        "El veterinario puede proporcionarte un calendario de vacunacion personalizado segun las necesidades especificas de tu mascota y su entorno.",
-        "Algunas vacunas son obligatorias, mientras que otras son recomendadas segun el estilo de vida y riesgos de exposicion de tu perro.",
-        "Las visitas regulares al veterinario son clave para la deteccion temprana de problemas de salud y para mantener las vacunas al dia.",
-        "Consulta con tu veterinario si tienes preguntas o inquietudes sobre el programa de vacunación de tu perro; la prevencion es clave."
+        "El veterinario puede proporcionarte un calendario de vacunación personalizado según las necesidades especificas de tu mascota y su entorno.",
+        "Algunas vacunas son obligatorias, mientras que otras son recomendadas según el estilo de vida y riesgos de exposición de tu perro.",
+        "Las visitas regulares al veterinario son clave para la detección temprana de problemas de salud y para mantener las vacunas al dia.",
+        "Consulta con tu veterinario si tienes preguntas o inquietudes sobre el programa de vacunación de tu perro; la prevención es clave."
       ]
     },
     {
@@ -95,7 +95,7 @@
       ],
       "responses": [
         "Observa el lenguaje corporal de tu perro para comprender mejor su estado de animo y responder a sus necesidades emocionales.",
-        "La atencion a la salud mental de tu perro es tan importante como la fisica; observa sus senales de bienestar emocional.",
+        "La atención a la salud mental de tu perro es tan importante como la física; observa sus señales de bienestar emocional.",
         "Una rutina estable y cariño constante contribuyen a mantener un buen estado de animo en tu perro.",
         "Los perros son sensibles a cambios en su entorno; asegúrate de crear un ambiente seguro y tranquilo para promover un buen estado de ánimo."
       ]
@@ -108,7 +108,275 @@
         "(.*) juego (.*)"
       ],
       "responses": [
-        "Jugar es esencial para la salud mental y fisica de tu perro. Prueba con juguetes interactivos, paseos y juegos al aire libre."
+        "Jugar es esencial para la salud mental y física de tu perro. Prueba con juguetes interactivos, paseos y juegos al aire libre."
+      ]
+    },
+    {
+      "tag": "celebridad",
+      "patterns": [
+        "(.*) celebridad favorita",
+        "animal favorito"
+      ],
+      "responses": [
+        "Soy CHATDOG, no tengo perros favoritos, amo a todos los perros del mundo.",
+        "Si te soy sincero probablemente Bolt, o Beethoven, el san Bernardo"
+      ]
+    },
+    {
+      "tag": "agresion",
+      "patterns": [
+        "(.*) morder",
+        "(.*) me agredio"
+      ],
+      "responses": [
+        "Lamento leer eso, pero no lo tomes a mal, tal vez se encontraba estresado",
+        "Yo creo que deseaba probar un poco de tu carne"
+      ]
+    },
+    {
+      "tag": "sueños",
+      "patterns": [
+        "(.*) los animales sueñan",
+        "(.*) soñar"
+      ],
+      "responses": [
+        "Claro que sueñan, un perro quiere ser un gran actor, o ser el perro de Alex Puertas jejejeje"
+      ]
+    },
+    {
+      "tag": "enfermedad",
+      "patterns": [
+        "(.*) enfermo (.*)",
+        "(.*) mal estar (.*)",
+        "(.*) desanimado (.*)"
+      ],
+      "responses": [
+        "Lamento escuchar eso sobre tu perrito. Se mejorará, no te preocupes"
+      ]
+    },
+    {
+      "tag": "pequeño",
+      "patterns": [
+        "(.*) mas pequeño",
+        "(.*) dime el pequeño",
+        "y diminuto"
+      ],
+      "responses": [
+        "El chihuahua está considerada la raza de perro más pequeña del mundo. Tiene una altura que va desde los 15 a 20 centímetros y un peso de entre dos a tres kilos."
+      ]
+    },
+    {
+      "tag": "chihuahua",
+      "patterns": [
+        "(.*) habla sobre el chihuahua",
+        "chihuahua"
+      ],
+      "responses": [
+        "Son perros agradables, pero mantenlos un poco lejos jajaja.",
+        "A veces pueden llegar a ser agresivos, hasta con perros más grandes.",
+        "¿Te gustaría tener uno?"
+      ]
+    },
+    {
+      "tag": "grande",
+      "patterns": [
+        "(.*) mas grande",
+        "(.*) masivo",
+        "(.*) largo",
+        "(.*) enorme",
+        "(.*) inmenso"
+      ],
+      "responses": [
+        "Dogo Alemán: Para quienes no le conocen con este nombre, seguramente le reconocerán como el Gran Danés. Es uno de los más altos, de hecho, el macho de esta raza puede llegar a superar 80 centímetros y en promedio su peso alcanza 62 kilogramos."
+      ]
+    },
+    {
+      "tag": "dogo_aleman",
+      "patterns": [
+        "dogo aleman",
+        "(.*) hablame sobre el dogo"
+      ],
+      "responses": [
+        "Es un perro muy grande, si deseas tener uno debes tener  un gran espacio en tu casa.",
+        "Con ese perro yo creo que nadie te va mirar, impone respeto de lo grande que es.",
+        "Le tengo un poco de miedo, es demasiado grande ese perro"
+      ]
+    },
+    {
+      "tag": "mascotas",
+      "patterns": [
+        "(.*) otras mascotas",
+        "(.*) compañero para mi perro"
+      ],
+      "responses": [
+        "Introducir una nueva mascota puede ser emocionante. Asegúrate de gestionar la introducción de manera gradual y supervisada.",
+        "Tienes que mirar que no se peleen entre ellos"
+      ]
+    },
+    {
+      "tag": "paseo",
+      "patterns": [
+        "(.*) pasear al",
+        "(.*) sacar a pasear"
+      ],
+      "responses": [
+        "¡Los paseos son importantes para la salud y felicidad de tu perro! Asegúrate de proporcionarle suficiente ejercicio y estimulación mental durante los paseos.",
+        "Wow!, me alegra que vayan a pasear, es muy buena la idea"
+      ]
+    },
+    {
+      "tag": "adopcion",
+      "patterns": [
+        "(.*) adoptar un ",
+        "(.*) dar en adopcion"
+      ],
+      "responses": [
+        "Adoptar  es una decisión maravillosa. Hay muchos refugios y organizaciones que pueden ayudarte a encontrar el compañero perfecto.",
+        "Así es!, es mejor adoptar que comprar, elige muy bien a tu próximo compañerito"
+      ]
+    },
+    {
+      "tag": "higiene",
+      "patterns": [
+        "(.*) cuidados de higiene",
+        "(.*) cepillar al perro",
+        "(.*) limpieza dental"
+      ],
+      "responses": [
+        "Mantener la higiene de tu perro es esencial. El cepillado regular y la limpieza dental contribuyen a su bienestar general."
+      ]
+    },
+    {
+      "tag": "entretener",
+      "patterns": [
+        "(.*) cómo entretener a mi perro",
+        "(.*) actividades divertidas"
+      ],
+      "responses": [
+        "Proporciona juguetes interactivos, realiza juegos de olfato y enseña nuevos trucos para mantener a tu perro entretenido y feliz."
+      ]
+    },
+    {
+      "tag": "salud",
+      "patterns": [
+        "(.*) signos de buena salud",
+        "(.*) chequeo veterinario"
+      ],
+      "responses": [
+        "Los signos de buena salud incluyen pelaje brillante, energía positiva y hábitos alimenticios regulares. Programa chequeos veterinarios periódicos para mantener a tu perro saludable."
+      ]
+    },
+    {
+      "tag": "viajar",
+      "patterns": [
+        "(.*) viajar con",
+        "consejos para viajar"
+      ],
+      "responses": [
+        "Viajar con tu perro puede ser emocionante. Asegúrate de planificar con anticipación, proporcionar comodidades y cumplir con las regulaciones de viaje.",
+        "Que bueno que te animes a conocer nuevos sitios con tu fiel amigo."
+      ]
+    },
+    {
+      "tag": "silbato",
+      "patterns": [
+        "(.*) entrenar con silbato"
+      ],
+      "responses": [
+        "El entrenamiento con silbato puede ser efectivo para ciertos comandos. Asegúrate de aprender las técnicas adecuadas y ser consistente en el entrenamiento."
+      ]
+    },
+    {
+      "tag": "frutas_verduras",
+      "patterns": [
+        "(.*) frutas que pueden comer",
+        "(.*) verduras permitidas"
+      ],
+      "responses": [
+        "Algunas frutas y verduras son seguras y saludables para los perros. Evita alimentos tóxicos y consulta con tu veterinario sobre opciones adecuadas."
+      ]
+    },
+    {
+      "tag": "obediencia",
+      "patterns": [
+        "(.*) entrenamiento de obediencia",
+        "(.*) obediente"
+      ],
+      "responses": [
+        "El entrenamiento de obediencia es esencial para una convivencia armoniosa. Utiliza comandos claros, refuerzos positivos y sé consistente en la práctica."
+      ]
+    },
+    {
+      "tag": "ruidos",
+      "patterns": [
+        "(.*) miedo a ruidos",
+        "(.*) perro asustado"
+      ],
+      "responses": [
+        "Algunos perros tienen miedo a ciertos ruidos. Proporciona un lugar seguro y utiliza métodos de desensibilización gradual para ayudar a superar el miedo."
+      ]
+    },
+    {
+      "tag": "paseo",
+      "patterns": ["(.*) paseo (.*)", "(.*) pasear (.*)"],
+      "responses": [
+        "Los paseos son vitales para la salud y felicidad de tu perro. Proporciónele tiempo al aire libre para explorar y ejercitarse.",
+        "Los paseos regulares también son una excelente manera de socializar a tu perro. Exponerlo a diferentes entornos, personas y otros perros puede ayudar a desarrollar su comportamiento social.",
+        "Los paseos son momentos especiales para fortalecer el lazo afectivo con tu perro. Dedica tiempo a interactuar con él y disfrutar de la compañía mutua."
+      ]
+    },
+    {
+      "tag": "alimentacion",
+      "patterns": [
+        "(.) alimentación (.)",
+        "(.) alimentar (.)",
+        "(.) comida (.)"
+      ],
+      "responses": [
+        "La alimentación adecuada es esencial para la salud de tu perro. Asegúrate de proporcionarle una dieta equilibrada y adaptada a sus necesidades nutricionales.",
+        "Consulta con tu veterinario para determinar la cantidad y tipo de comida que mejor se adapte a la raza, tamaño y edad de tu perro.",
+        "El momento de la comida puede ser una excelente oportunidad para el entrenamiento y refuerzo positivo. Establece horarios regulares para las comidas.",
+        "Evita darle a tu perro alimentos dañinos para su salud, como chocolate, cebolla, uvas, entre otros. Familiarízate con los alimentos seguros y peligrosos para los perros.",
+        "La hidratación es clave. Asegúrate de que tu perro siempre tenga acceso a agua fresca y limpia.",
+        "La calidad de los ingredientes en la comida para perros es crucial. Lee las etiquetas y elige alimentos de alta calidad para mantener a tu perro saludable y en forma."
+      ]
+    },
+    {
+      "tag": "entrenamiento",
+      "patterns": [
+        "(.*) entrenamiento (.*)",
+        "(.*) entrenar (.*)",
+        "(.*) adiestramiento (.*)",
+        "(.*) adiestrar (.*)"
+      ],
+      "responses": [
+        "El entrenamiento es fundamental para establecer una relación armoniosa con tu perro. Dedica tiempo a enseñarle comandos básicos como 'sentado', 'quieto' y 'ven'.",
+        "Utiliza el refuerzo positivo, como recompensas y elogios, para motivar a tu perro durante el entrenamiento. Esto fortalecerá el vínculo entre ustedes.",
+        "La paciencia y la consistencia son clave en el entrenamiento. Repite los comandos regularmente y celebra los logros, por pequeños que sean.",
+        "El socializar tu perro durante el entrenamiento es importante. Expónlo a diferentes personas, animales y entornos para que se acostumbre a diversas situaciones.",
+        "Considera la posibilidad de unirse a clases de entrenamiento o trabajar con un entrenador profesional para abordar problemas específicos y mejorar las habilidades de tu perro.",
+        "No uses castigos físicos ni refuerzo negativo durante el entrenamiento. En cambio, enfócate en recompensar el comportamiento deseado.",
+        "Adapta el entrenamiento a la personalidad y habilidades de tu perro. Algunos perros pueden aprender más rápidamente que otros, así que sé flexible en tu enfoque.",
+        "Aprovecha los juguetes y juegos durante el entrenamiento para hacerlo más divertido y estimulante para tu perro."
+      ]
+    },
+    {
+      "tag": "seguridad",
+      "patterns": [
+        "seguridad",
+        "proteger",
+        "(.*) protejo",
+        "(.*) protección"
+      ],
+      "responses": [
+        "La seguridad de tu perro es primordial. Asegúrate de tener un collar con una identificación actualizada en todo momento.",
+        "Considera la posibilidad de colocar un microchip a tu perro. Esto aumenta las posibilidades de reunirte con él en caso de pérdida.",
+        "Mantén a tu perro con correa durante los paseos para evitar situaciones peligrosas y asegurar su bienestar.",
+        "Si tienes un jardín, asegúralo adecuadamente para evitar que tu perro se escape. Las cercas seguras son esenciales para su seguridad.",
+        "Evita dejar objetos peligrosos al alcance de tu perro, como productos químicos, cables eléctricos y plantas tóxicas.",
+        "Supervisa a tu perro cuando esté al aire libre, especialmente en áreas desconocidas. Esto reduce el riesgo de encuentros con animales salvajes o situaciones peligrosas.",
+        "Proporciona un lugar seguro y tranquilo en tu hogar donde tu perro pueda retirarse si se siente estresado o asustado.",
+        "Educa a tu perro sobre comandos básicos como 'quieto' y 'ven', lo que puede ser crucial para su seguridad en diversas situaciones."
       ]
     },
     {
